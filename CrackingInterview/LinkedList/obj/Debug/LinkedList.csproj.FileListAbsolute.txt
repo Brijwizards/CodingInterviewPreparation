@@ -1,0 +1,14 @@
+C:\CrackingInterview\CrackingInterview\LinkedList\bin\Debug\LinkedList.exe.config
+C:\CrackingInterview\CrackingInterview\LinkedList\bin\Debug\LinkedList.exe
+C:\CrackingInterview\CrackingInterview\LinkedList\bin\Debug\LinkedList.pdb
+C:\CrackingInterview\CrackingInterview\LinkedList\obj\Debug\LinkedList.csproj.CoreCompileInputs.cache
+C:\CrackingInterview\CrackingInterview\LinkedList\obj\Debug\LinkedList.exe
+C:\CrackingInterview\CrackingInterview\LinkedList\obj\Debug\LinkedList.pdb
+C:\CrackingInterview\CrackingInterview\LinkedList\obj\Debug\LinkedList.csprojAssemblyReference.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LinkedList\bin\Debug\LinkedList.exe.config
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LinkedList\bin\Debug\LinkedList.exe
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LinkedList\bin\Debug\LinkedList.pdb
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LinkedList\obj\Debug\LinkedList.csprojAssemblyReference.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LinkedList\obj\Debug\LinkedList.csproj.CoreCompileInputs.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LinkedList\obj\Debug\LinkedList.exe
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LinkedList\obj\Debug\LinkedList.pdb

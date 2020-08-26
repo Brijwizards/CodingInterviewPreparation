@@ -1,0 +1,14 @@
+C:\CrackingInterview\CrackingInterview\Tree\bin\Debug\Tree.exe.config
+C:\CrackingInterview\CrackingInterview\Tree\bin\Debug\Tree.exe
+C:\CrackingInterview\CrackingInterview\Tree\bin\Debug\Tree.pdb
+C:\CrackingInterview\CrackingInterview\Tree\obj\Debug\Tree.csproj.CoreCompileInputs.cache
+C:\CrackingInterview\CrackingInterview\Tree\obj\Debug\Tree.exe
+C:\CrackingInterview\CrackingInterview\Tree\obj\Debug\Tree.pdb
+C:\CrackingInterview\CrackingInterview\Tree\obj\Debug\Tree.csprojAssemblyReference.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Tree\bin\Debug\Tree.exe.config
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Tree\bin\Debug\Tree.exe
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Tree\bin\Debug\Tree.pdb
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Tree\obj\Debug\Tree.csproj.CoreCompileInputs.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Tree\obj\Debug\Tree.exe
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Tree\obj\Debug\Tree.pdb
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Tree\obj\Debug\Tree.csprojAssemblyReference.cache

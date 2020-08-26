@@ -1,0 +1,14 @@
+C:\CrackingInterview\CrackingInterview\Stack\bin\Debug\Stack.exe.config
+C:\CrackingInterview\CrackingInterview\Stack\bin\Debug\Stack.exe
+C:\CrackingInterview\CrackingInterview\Stack\bin\Debug\Stack.pdb
+C:\CrackingInterview\CrackingInterview\Stack\obj\Debug\Stack.csproj.CoreCompileInputs.cache
+C:\CrackingInterview\CrackingInterview\Stack\obj\Debug\Stack.exe
+C:\CrackingInterview\CrackingInterview\Stack\obj\Debug\Stack.pdb
+C:\CrackingInterview\CrackingInterview\Stack\obj\Debug\Stack.csprojAssemblyReference.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Stack\bin\Debug\Stack.exe.config
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Stack\bin\Debug\Stack.exe
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Stack\bin\Debug\Stack.pdb
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Stack\obj\Debug\Stack.csproj.CoreCompileInputs.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Stack\obj\Debug\Stack.exe
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Stack\obj\Debug\Stack.pdb
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Stack\obj\Debug\Stack.csprojAssemblyReference.cache

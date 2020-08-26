@@ -1,0 +1,13 @@
+C:\CrackingInterview\CrackingInterview\Graph\bin\Debug\Graph.exe.config
+C:\CrackingInterview\CrackingInterview\Graph\bin\Debug\Graph.exe
+C:\CrackingInterview\CrackingInterview\Graph\bin\Debug\Graph.pdb
+C:\CrackingInterview\CrackingInterview\Graph\obj\Debug\Graph.csproj.CoreCompileInputs.cache
+C:\CrackingInterview\CrackingInterview\Graph\obj\Debug\Graph.exe
+C:\CrackingInterview\CrackingInterview\Graph\obj\Debug\Graph.pdb
+C:\CrackingInterview\CrackingInterview\Graph\obj\Debug\Graph.csprojAssemblyReference.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Graph\bin\Debug\Graph.exe.config
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Graph\bin\Debug\Graph.exe
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Graph\bin\Debug\Graph.pdb
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Graph\obj\Debug\Graph.csproj.CoreCompileInputs.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Graph\obj\Debug\Graph.exe
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Graph\obj\Debug\Graph.pdb

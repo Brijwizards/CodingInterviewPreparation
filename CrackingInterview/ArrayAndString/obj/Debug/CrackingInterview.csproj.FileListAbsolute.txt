@@ -1,0 +1,13 @@
+C:\Users\singhb0\source\repos\CrackingInterview\CrackingInterview\bin\Debug\CrackingInterview.exe.config
+C:\Users\singhb0\source\repos\CrackingInterview\CrackingInterview\bin\Debug\CrackingInterview.exe
+C:\Users\singhb0\source\repos\CrackingInterview\CrackingInterview\bin\Debug\CrackingInterview.pdb
+C:\Users\singhb0\source\repos\CrackingInterview\CrackingInterview\obj\Debug\CrackingInterview.csprojAssemblyReference.cache
+C:\Users\singhb0\source\repos\CrackingInterview\CrackingInterview\obj\Debug\CrackingInterview.csproj.CoreCompileInputs.cache
+C:\Users\singhb0\source\repos\CrackingInterview\CrackingInterview\obj\Debug\CrackingInterview.exe
+C:\Users\singhb0\source\repos\CrackingInterview\CrackingInterview\obj\Debug\CrackingInterview.pdb
+C:\CrackingInterview\CrackingInterview\CrackingInterview\bin\Debug\CrackingInterview.exe
+C:\CrackingInterview\CrackingInterview\CrackingInterview\bin\Debug\CrackingInterview.pdb
+C:\CrackingInterview\CrackingInterview\CrackingInterview\obj\Debug\CrackingInterview.csprojAssemblyReference.cache
+C:\CrackingInterview\CrackingInterview\CrackingInterview\obj\Debug\CrackingInterview.csproj.CoreCompileInputs.cache
+C:\CrackingInterview\CrackingInterview\CrackingInterview\obj\Debug\CrackingInterview.exe
+C:\CrackingInterview\CrackingInterview\CrackingInterview\obj\Debug\CrackingInterview.pdb

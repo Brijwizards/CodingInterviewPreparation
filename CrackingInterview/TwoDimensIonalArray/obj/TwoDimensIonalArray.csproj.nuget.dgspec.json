@@ -1,0 +1,74 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\bsinghui\\source\\repos\\CrackingInterview\\CrackingInterview\\TwoDimensIonalArray\\TwoDimensIonalArray.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\bsinghui\\source\\repos\\CrackingInterview\\CrackingInterview\\TwoDimensIonalArray\\TwoDimensIonalArray.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bsinghui\\source\\repos\\CrackingInterview\\CrackingInterview\\TwoDimensIonalArray\\TwoDimensIonalArray.csproj",
+        "projectName": "TwoDimensIonalArray",
+        "projectPath": "C:\\Users\\bsinghui\\source\\repos\\CrackingInterview\\CrackingInterview\\TwoDimensIonalArray\\TwoDimensIonalArray.csproj",
+        "packagesPath": "C:\\Users\\bsinghui\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bsinghui\\source\\repos\\CrackingInterview\\CrackingInterview\\TwoDimensIonalArray\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\bsinghui\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore-tooling/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-entityframeworkcore/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-extensions/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "runtime.win-x64.Microsoft.NETCore.DotNetAppHost": {
+              "include": "None",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0-preview4-27615-11, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "none"
+            }
+          }
+        }
+      }
+    }
+  }
+}
