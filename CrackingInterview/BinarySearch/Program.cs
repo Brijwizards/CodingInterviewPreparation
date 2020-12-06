@@ -6,9 +6,11 @@ namespace BinarySearch
     {
         static void Main(string[] args)
         {
-            Search(new int[]{ 4,5,6,7,0,1,2}, 0);
+            //Search(new int[]{ 4,5,6,7,0,1,2}, 0);
             //MyPower(2.0, 5);
-            MyPowerRecursive(2.0, 5);
+            //MyPowerRecursive(2.0, 5);
+            Sqrt(5);
+            MyPower(2.0, 10);
         }
 
         public static int PerfectSqrt(int a)
@@ -64,14 +66,14 @@ namespace BinarySearch
                 N = -N;
             }
             double ans = 1;
-            double current_product = x;
+            //double current_product = x;
             for (long i = N; i > 0; i /= 2)
             {
                 if ((i % 2) == 1)
                 {
-                    ans = ans * current_product;
+                    ans = ans * x;
                 }
-                current_product = current_product * current_product;
+                x = x * x;
             }
             return ans;
         }

@@ -1,0 +1,13 @@
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LINQOperation\bin\Debug\netcoreapp3.0\LINQAndDictionaryOperation.exe
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LINQOperation\bin\Debug\netcoreapp3.0\LINQAndDictionaryOperation.deps.json
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LINQOperation\bin\Debug\netcoreapp3.0\LINQAndDictionaryOperation.runtimeconfig.json
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LINQOperation\bin\Debug\netcoreapp3.0\LINQAndDictionaryOperation.runtimeconfig.dev.json
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LINQOperation\bin\Debug\netcoreapp3.0\LINQAndDictionaryOperation.dll
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LINQOperation\bin\Debug\netcoreapp3.0\LINQAndDictionaryOperation.pdb
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LINQOperation\obj\Debug\netcoreapp3.0\LINQAndDictionaryOperation.csprojAssemblyReference.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LINQOperation\obj\Debug\netcoreapp3.0\LINQAndDictionaryOperation.AssemblyInfoInputs.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LINQOperation\obj\Debug\netcoreapp3.0\LINQAndDictionaryOperation.AssemblyInfo.cs
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LINQOperation\obj\Debug\netcoreapp3.0\LINQAndDictionaryOperation.csproj.CoreCompileInputs.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LINQOperation\obj\Debug\netcoreapp3.0\LINQAndDictionaryOperation.dll
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LINQOperation\obj\Debug\netcoreapp3.0\LINQAndDictionaryOperation.pdb
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LINQOperation\obj\Debug\netcoreapp3.0\LINQAndDictionaryOperation.genruntimeconfig.cache

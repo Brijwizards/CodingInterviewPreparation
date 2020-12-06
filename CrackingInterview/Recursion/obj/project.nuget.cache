@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "6Qa8lyAwIFxcas55B4NHnXGlmp7hBS1GxyuHoIfbGrqKH0k4KOHYKRVCYZNVax/xntp63CTr8b49crqkjF+eTA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\bsinghui\\source\\repos\\CrackingInterview\\CrackingInterview\\Recursion\\Recursion.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bsinghui\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\bsinghui\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\bsinghui\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",
+    "C:\\Users\\bsinghui\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -20,3 +20,5 @@ C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Recursion\obj
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Recursion\obj\Debug\netcoreapp3.0\Recursion.AssemblyInfo.cs
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Recursion\obj\Debug\netcoreapp3.0\Recursion.dll
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Recursion\obj\Debug\netcoreapp3.0\Recursion.pdb
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Recursion\obj\Debug\netcoreapp3.0\Recursion.csprojAssemblyReference.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Recursion\obj\Debug\netcoreapp3.0\Recursion.genruntimeconfig.cache

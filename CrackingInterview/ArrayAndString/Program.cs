@@ -22,7 +22,12 @@ namespace CrackingInterview
 
         static void Main(string[] args)
         {
-            string str = FrequencySort("tree");
+            MinSteps("friend", "family");
+            NumWaterBottles(9, 3);
+            MergeSortedArray(new int[] { 1, 2 }, new int[] { 3, 4, 0, 0 });
+            //CheckSubarraySum(new int[]{ 23, 2, 4, 6, 7 }, 6);
+            //SortWordDescending("this is_brijesh-singh singh is is");
+            //string str = FrequencySort("tree");
             //RemoveKdigits("1432219", 3);
             // UniqueDroneId(new int[] { 2, 3, 5, 5, 3, 2, 100 });
             //CombinationSum(new int[] { 2, 3, 5 }, 8);          
@@ -49,7 +54,7 @@ namespace CrackingInterview
             //LongestValidParentheses(")()())");           
             //Rectangle.SetZeroes(new int[,] { { 1, 1, 1 },{ 1, 0, 1 },{ 1, 1, 1 } });
             //SortByKey(new char[] {'b','a','n','a','n','a','s' }, new char[] {'a','n','s'});
-            //LadderLength("hit", "cog", new List<string> { "hot", "dot", "dog", "lot", "log", "cog" });
+            LadderLength("hit", "cog", new List<string> { "hot", "dot", "dog", "lot", "log", "cog" });
             //LongestPalindrome("abccccdd");
             //TitleToNumber("ZY");
             //MaxProfit(new int[] { 7, 1, 5, 3, 6, 4 });
@@ -60,7 +65,7 @@ namespace CrackingInterview
             //Sort0s1sAnd2s(new int[] { 0, 1, 2, 1, 0, 1 });           
             #endregion
             #region Google
-           
+
             MergeInterval(new List<Interval> { new Interval(1, 3), new Interval(2, 6), new Interval(8, 10), new Interval(15, 18) });
 
             QuickSort(new int[] { 10, 7, 8, 9, 1, 5 }, 0, 5);
@@ -69,7 +74,7 @@ namespace CrackingInterview
             SubarraySum(new int[] { 1, 2, 3, 7, 5 }, 12);
 
             NumUniqueEmails(new string[] { "test.email+alex@leetcode.com", "test.e.mail+bob.cathy@leetcode.com", "testemail+david@lee.tcode.com" });
-            MergeSortedArray(new int[] {1,2}, new int[] {-2});
+            //MergeSortedArray(new int[] {1,2}, new int[] {3,4,0 ,0});
             LengthOfLongestSubstring("abcabcbb");           
             TrapWater(new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 });
             TotalFruit(new int[] {0, 1, 6, 6, 4, 4, 6});
@@ -147,6 +152,96 @@ namespace CrackingInterview
             //InsertionSort(new int[] { 12, 11, 13, 5, 6 });
             //IntegerToString(123);
             #endregion               
+
+        }
+
+        public static int NumWaterBottles(int numBottles, int numExchange)
+        {
+            if (numExchange == 0)
+                return numBottles;
+
+            int carry;
+            int quotient;
+            int maxNum = numBottles;
+
+            while(maxNum >= numExchange)
+            {
+                quotient = maxNum / numExchange;
+                numBottles = numBottles + quotient;
+                carry = maxNum % numExchange;
+                maxNum = carry + quotient;
+            }
+
+            if (numBottles == 0)
+                return 0;
+
+            return numBottles;
+        }
+
+        public static int MinSteps(string s, string t)
+        {
+            Dictionary<char, int> dict = new Dictionary<char, int>();
+            int result = t.Length;           
+            
+            foreach (var item in s)
+            {
+                if (!dict.ContainsKey(item))
+                {
+                    dict.Add(item, 1);
+                }
+                else
+                    dict[item]++;
+            }
+
+
+            foreach (var item in t)
+            {
+
+                if (dict.ContainsKey(item) && dict[item] != 0)
+                {
+                    dict[item]--;
+                    result--;
+                }
+            }
+
+            return result;
+        }
+
+        public static bool IsAnagram(char[] arr, Dictionary<char, int> map)
+        {
+            foreach(var item in arr)
+            {
+                if (!map.ContainsKey(item))
+                    return false;
+                else
+                    map[item]--;
+            }
+
+            foreach(var item in map)
+            {
+                if (item.Value > 0)
+                    return false;
+            }
+
+            return true;
+        }
+
+        public static bool CheckSubarraySum(int[] nums, int k)
+        {
+            HashSet<int> seenSet = new HashSet<int>();
+            int runningSum = 0;
+            int sumSofar = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                runningSum = runningSum + nums[i];
+                if (k != 0)
+                    runningSum = runningSum % k;
+                if (seenSet.Contains(runningSum))
+                    return true;
+                seenSet.Add(sumSofar);
+                sumSofar = runningSum;
+            }
+            return false;
 
         }
 
@@ -317,20 +412,15 @@ namespace CrackingInterview
                 }
             
                 var keyCount = word.Values.ToList();
-            //keyCount.Sort((a, b) => b.CompareTo(a));
 
             // Sorting using CompareTo(non LINQ)  and lamda expression. 
-            keyCount.Sort((a, b) =>
-            {
-                Console.WriteLine("comparing " + a + " with " + b);             
-                return b.CompareTo(a);
-
-            });
+            //keyCount.Sort((a, b) => 1 * a.CompareTo(b));
+            keyCount.Sort((a, b) => b.CompareTo(a));
 
             // Sorting using LINQ and lamda expression.
             //var sorted = keyCount.OrderByDescending(x => x).ToList();
 
-                foreach (var value in keyCount)
+            foreach (var value in keyCount)
                 {
                     Console.WriteLine("{0}: {1}", word.FirstOrDefault(x => x.Value == value).Key, value);
                 }
@@ -1009,28 +1099,61 @@ namespace CrackingInterview
 
         public static int[] MergeSortedArray(int[] nums1, int[] nums2)
         {
-            int len1 = nums1.Length;
-            int len2 = nums2.Length;
-            int totalLength = len1 + len2;
-            int[] result = new int[totalLength];
+            int i = nums1.Length - 1;
+            int j = (nums2.Length - nums1.Length) - 1;
+            int k = nums2.Length - 1;
 
-            int i = 0, j = 0, k = 0;
-
-            while (i < len1 && j < len2)
+            while (i>=0 && j>=0)
             {
-                result[k++] = nums2[j] < nums1[i] ? nums2[j++] : nums1[i++];
+                if(nums1[i] > nums2[j])
+                {
+                    nums2[k] = nums1[i];
+                    i--;
+                    k--;
+                }
+                else
+                {
+                    nums2[k] = nums2[j];
+                    j--;
+                    k--;
+                }
             }
 
-            while (i < len1)
+            while(i>=0)
             {
-                result[k++] = nums1[i++];
+                nums2[k] = nums1[i];
+                i--;
+                k--;
             }
 
-            while (j < len2)
+            while (j >= 0)
             {
-                result[k++] = nums2[j++];
+                nums2[k] = nums1[j];
+                j--;
+                k--;
             }
-            return result;
+            //int len1 = nums1.Length;
+            //int len2 = nums2.Length;
+            //int totalLength = len1 + len2;
+            //int[] result = new int[totalLength];
+
+            //int i = 0, j = 0, k = 0;
+
+            //while (i < len1 && j < len2)
+            //{
+            //    result[k++] = nums2[j] < nums1[i] ? nums2[j++] : nums1[i++];
+            //}
+
+            //while (i < len1)
+            //{
+            //    result[k++] = nums1[i++];
+            //}
+
+            //while (j < len2)
+            //{
+            //    result[k++] = nums2[j++];
+            //}
+            return nums2;
         }
 
 
@@ -1128,8 +1251,10 @@ namespace CrackingInterview
             IList<Interval> res = new List<Interval>();
             foreach (Interval curr in intervals.OrderBy(x => x.start))
             {
-                if (res.Count == 0 || res[res.Count - 1].end < curr.start) res.Add(new Interval(curr.start, curr.end));
-                else res[res.Count - 1].end = Math.Max(res[res.Count - 1].end, curr.end);
+                if (res.Count == 0 || res[res.Count - 1].end < curr.start)
+                    res.Add(new Interval(curr.start, curr.end));
+                else
+                    res[res.Count - 1].end = Math.Max(res[res.Count - 1].end, curr.end);
             }
             return res;
         }
@@ -1688,7 +1813,6 @@ namespace CrackingInterview
             if (!wordList.Contains(endWord))
                 return 0;
             HashSet<string> dict = new HashSet<string>(wordList);
-
             Queue<string> queue = new Queue<string>();
             queue.Enqueue(beginWord);
             int dis = 1;

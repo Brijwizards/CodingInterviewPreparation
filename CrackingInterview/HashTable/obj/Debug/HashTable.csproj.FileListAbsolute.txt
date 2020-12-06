@@ -11,3 +11,4 @@ C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\HashTable\bin
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\HashTable\obj\Debug\HashTable.csproj.CoreCompileInputs.cache
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\HashTable\obj\Debug\HashTable.exe
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\HashTable\obj\Debug\HashTable.pdb
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\HashTable\obj\Debug\HashTable.csprojAssemblyReference.cache

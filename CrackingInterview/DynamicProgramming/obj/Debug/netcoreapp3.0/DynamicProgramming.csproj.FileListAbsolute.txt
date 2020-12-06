@@ -21,3 +21,4 @@ C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\DynamicProgra
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\DynamicProgramming\obj\Debug\netcoreapp3.0\DynamicProgramming.dll
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\DynamicProgramming\obj\Debug\netcoreapp3.0\DynamicProgramming.pdb
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\DynamicProgramming\obj\Debug\netcoreapp3.0\DynamicProgramming.csprojAssemblyReference.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\DynamicProgramming\obj\Debug\netcoreapp3.0\DynamicProgramming.genruntimeconfig.cache

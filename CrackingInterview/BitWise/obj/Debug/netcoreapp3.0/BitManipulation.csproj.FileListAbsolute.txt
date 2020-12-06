@@ -20,3 +20,5 @@ C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\BitWise\obj\D
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\BitWise\obj\Debug\netcoreapp3.0\BitManipulation.AssemblyInfo.cs
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\BitWise\obj\Debug\netcoreapp3.0\BitManipulation.dll
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\BitWise\obj\Debug\netcoreapp3.0\BitManipulation.pdb
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\BitWise\obj\Debug\netcoreapp3.0\BitManipulation.csprojAssemblyReference.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\BitWise\obj\Debug\netcoreapp3.0\BitManipulation.genruntimeconfig.cache

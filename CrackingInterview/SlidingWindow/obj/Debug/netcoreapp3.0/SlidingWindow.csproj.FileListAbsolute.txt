@@ -22,3 +22,4 @@ C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\SlidingWindow
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\SlidingWindow\obj\Debug\netcoreapp3.0\SlidingWindow.dll
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\SlidingWindow\obj\Debug\netcoreapp3.0\SlidingWindow.pdb
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\SlidingWindow\obj\Debug\netcoreapp3.0\SlidingWindow.csprojAssemblyReference.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\SlidingWindow\obj\Debug\netcoreapp3.0\SlidingWindow.genruntimeconfig.cache

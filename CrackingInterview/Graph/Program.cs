@@ -10,13 +10,14 @@ namespace Graph
     {
         public static void Main(string[] args)
         {
+            FindOrder(4, new int[][] { new int[] { 1, 0 }, new int[] {2,0}, new int[] {3, 1}, new int[] {3,2} });
             // Create a graph given in the above diagram
             var graph = new Graph();
 
             graph.AddEdge(1, 2);
             graph.AddEdge(1, 3);
             graph.AddEdge(1, 4);
-            graph.AddEdge(1, 2);
+            //graph.AddEdge(1, 2);
 
             graph.AddEdge(2, 5);
             graph.AddEdge(2, 6);
@@ -49,6 +50,76 @@ namespace Graph
 
         }
 
+        static Dictionary<int, List<int>> Map = new Dictionary<int, List<int>>();
+        static public bool[] Visited;
+        static public bool[] CallStack;
+        static public Stack<int> order = new Stack<int>();
+        public static int[] FindOrder(int numCourses, int[][] prerequisites)
+        {
+            Visited = new bool[numCourses];
+            CallStack = new bool[numCourses];
+
+            IntitializeMap(prerequisites);
+
+            for (int course = 0; course < numCourses; ++course)
+            {
+                if (IsCyclic(course))
+                    return new int[0];
+            }
+
+            int[] output = new int[order.Count];
+
+            int pos = 0;
+
+            while (order.Count > 0)
+            {
+                output[pos++] = order.Pop();
+            }
+
+            return output.Length == 0 ? new int[1] { 0 } : output;
+        }
+        public static bool IsCyclic(int course)
+        {
+
+            if (CallStack[course])
+                return true;
+
+            if (Visited[course])
+                return false;
+
+            Visited[course] = true;
+            CallStack[course] = true;           
+
+            if (Map.ContainsKey(course))
+            {
+                foreach (var child in Map[course])
+                {
+                    if (IsCyclic(child))
+                        return true;
+                }
+            }
+
+            order.Push(course);
+            CallStack[course] = false;
+
+            return false;
+        }
+
+        public static void IntitializeMap(int[][] courses)
+        {
+
+            for (int i = 0; i < courses.Length; ++i)
+            {
+                if (!Map.ContainsKey(courses[i][0]))
+                    Map[courses[i][0]] = new List<int>();
+
+                if (!Map.ContainsKey(courses[i][1]))
+                    Map[courses[i][1]] = new List<int>();
+
+                Map[courses[i][1]].Add(courses[i][0]);
+            }
+        }
+
         public class Graph
         {
             public Dictionary<int, HashSet<int>> Adj { get; private set; }
@@ -72,9 +143,9 @@ namespace Graph
                 }
                 else
                 {
-                    var hashSet = new HashSet<int>();
-                    hashSet.Add(target);
-                    Adj.Add(source, hashSet);
+                    //var hashSet = new HashSet<int>();
+                    //hashSet.Add(target);
+                    Adj.Add(source, new HashSet<int> { target});
                 }
             }
 
@@ -193,7 +264,7 @@ namespace Graph
                 // Mark this node as visited
                 visited.Add(v);
                 Console.WriteLine(v);
-                // Only if the node has a any adj notes
+                // Only if the node has a any adjacent nodes.
                 if (Adj.ContainsKey(v))
                 {
                     // Iterate through UNVISITED nodes

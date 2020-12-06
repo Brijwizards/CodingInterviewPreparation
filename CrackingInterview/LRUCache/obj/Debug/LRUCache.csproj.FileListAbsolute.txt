@@ -11,3 +11,4 @@ C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LRUCache\bin\
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LRUCache\obj\Debug\LRUCache.csproj.CoreCompileInputs.cache
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LRUCache\obj\Debug\LRUCache.exe
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LRUCache\obj\Debug\LRUCache.pdb
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\LRUCache\obj\Debug\LRUCache.csprojAssemblyReference.cache

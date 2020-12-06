@@ -21,3 +21,5 @@ C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\BackTracking\
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\BackTracking\obj\Debug\netcoreapp3.0\BackTracking.AssemblyInfo.cs
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\BackTracking\obj\Debug\netcoreapp3.0\BackTracking.dll
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\BackTracking\obj\Debug\netcoreapp3.0\BackTracking.pdb
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\BackTracking\obj\Debug\netcoreapp3.0\BackTracking.csprojAssemblyReference.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\BackTracking\obj\Debug\netcoreapp3.0\BackTracking.genruntimeconfig.cache

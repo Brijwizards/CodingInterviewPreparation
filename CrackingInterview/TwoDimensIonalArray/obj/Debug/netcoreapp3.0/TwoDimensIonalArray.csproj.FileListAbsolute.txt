@@ -20,3 +20,5 @@ C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\TwoDimensIona
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\TwoDimensIonalArray\obj\Debug\netcoreapp3.0\TwoDimensIonalArray.AssemblyInfo.cs
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\TwoDimensIonalArray\obj\Debug\netcoreapp3.0\TwoDimensIonalArray.dll
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\TwoDimensIonalArray\obj\Debug\netcoreapp3.0\TwoDimensIonalArray.pdb
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\TwoDimensIonalArray\obj\Debug\netcoreapp3.0\TwoDimensIonalArray.csprojAssemblyReference.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\TwoDimensIonalArray\obj\Debug\netcoreapp3.0\TwoDimensIonalArray.genruntimeconfig.cache

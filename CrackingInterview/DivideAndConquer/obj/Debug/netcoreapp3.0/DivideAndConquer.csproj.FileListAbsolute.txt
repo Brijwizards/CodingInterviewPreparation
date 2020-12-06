@@ -20,3 +20,5 @@ C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\DivideAndConq
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\DivideAndConquer\obj\Debug\netcoreapp3.0\DivideAndConquer.AssemblyInfo.cs
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\DivideAndConquer\obj\Debug\netcoreapp3.0\DivideAndConquer.dll
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\DivideAndConquer\obj\Debug\netcoreapp3.0\DivideAndConquer.pdb
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\DivideAndConquer\obj\Debug\netcoreapp3.0\DivideAndConquer.csprojAssemblyReference.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\DivideAndConquer\obj\Debug\netcoreapp3.0\DivideAndConquer.genruntimeconfig.cache

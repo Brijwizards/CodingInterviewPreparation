@@ -1,0 +1,13 @@
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\OnlineAssessments\bin\Debug\netcoreapp3.1\OnlineAssessments.exe
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\OnlineAssessments\bin\Debug\netcoreapp3.1\OnlineAssessments.deps.json
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\OnlineAssessments\bin\Debug\netcoreapp3.1\OnlineAssessments.runtimeconfig.json
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\OnlineAssessments\bin\Debug\netcoreapp3.1\OnlineAssessments.runtimeconfig.dev.json
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\OnlineAssessments\bin\Debug\netcoreapp3.1\OnlineAssessments.dll
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\OnlineAssessments\bin\Debug\netcoreapp3.1\OnlineAssessments.pdb
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\OnlineAssessments\obj\Debug\netcoreapp3.1\OnlineAssessments.csprojAssemblyReference.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\OnlineAssessments\obj\Debug\netcoreapp3.1\OnlineAssessments.AssemblyInfoInputs.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\OnlineAssessments\obj\Debug\netcoreapp3.1\OnlineAssessments.AssemblyInfo.cs
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\OnlineAssessments\obj\Debug\netcoreapp3.1\OnlineAssessments.csproj.CoreCompileInputs.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\OnlineAssessments\obj\Debug\netcoreapp3.1\OnlineAssessments.dll
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\OnlineAssessments\obj\Debug\netcoreapp3.1\OnlineAssessments.pdb
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\OnlineAssessments\obj\Debug\netcoreapp3.1\OnlineAssessments.genruntimeconfig.cache

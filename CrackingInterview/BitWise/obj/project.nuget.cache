@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "tnW/mThH86ZeIBl57La/PO/1IXI9d/MXRmxmXk9nlgUk7OAJZ3/Alut/5V11ofoE3Bg2SYgFnmx3uWYtdt0pEQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\bsinghui\\source\\repos\\CrackingInterview\\CrackingInterview\\BitWise\\BitManipulation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bsinghui\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\bsinghui\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\bsinghui\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",
+    "C:\\Users\\bsinghui\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -20,3 +20,5 @@ C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\OOPSConcept\o
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\OOPSConcept\obj\Debug\netcoreapp3.0\OOPSConcept.AssemblyInfo.cs
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\OOPSConcept\obj\Debug\netcoreapp3.0\OOPSConcept.dll
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\OOPSConcept\obj\Debug\netcoreapp3.0\OOPSConcept.pdb
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\OOPSConcept\obj\Debug\netcoreapp3.0\OOPSConcept.csprojAssemblyReference.cache
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\OOPSConcept\obj\Debug\netcoreapp3.0\OOPSConcept.genruntimeconfig.cache

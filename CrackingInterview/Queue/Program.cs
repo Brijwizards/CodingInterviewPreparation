@@ -10,6 +10,12 @@ namespace Queue
     {
         static void Main(string[] args)
         {
+            MovingAverage movingAverage = new MovingAverage(3);
+            movingAverage.Next(1);
+            movingAverage.Next(10);
+            movingAverage.Next(3);
+            movingAverage.Next(5);
+
             #region Queue
             Queue queue = new Queue(5);
             queue.Enqueue(10);
@@ -158,6 +164,34 @@ namespace Queue
         public bool IsFull()
         {
             return len == nums.Length;
+        }
+    }
+
+    public class MovingAverage
+    {
+
+        /** Initialize your data structure here. */
+        double sum;
+        Queue<int> queue = new Queue<int>();
+        int count;
+        public MovingAverage(int size)
+        {
+            sum = 0.0d;
+            count = size;
+        }
+
+        public double Next(int val)
+        {
+            if (queue.Count == count)
+            {
+                sum = sum - queue.Dequeue() + val;
+            }
+            else
+            {
+                sum = sum + val;
+            }
+            queue.Enqueue(val);
+            return sum / queue.Count;
         }
     }
 }

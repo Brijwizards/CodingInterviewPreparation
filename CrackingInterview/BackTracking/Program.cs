@@ -8,6 +8,7 @@ namespace BackTracking
     {
         static void Main(string[] args)
         {
+            GenerateParenthesis(3);
             FindAnagrams("eidboaoo", "ab");
         }
 

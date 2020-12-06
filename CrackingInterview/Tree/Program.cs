@@ -10,8 +10,34 @@ namespace Tree
     {
         static void Main(string[] args)
         {
-            #region Tree
+
+            TreeNode node = new TreeNode(4);
+            node.left = new TreeNode(1);
+            node.left.left = new TreeNode(0);
+            node.left.right = new TreeNode(2);
+            node.left.right.right = new TreeNode(3);
+
+            node.right = new TreeNode(6);
+            node.right.left = new TreeNode(5);
+            node.right.right = new TreeNode(7);
+            node.right.right.right = new TreeNode(8);
+            //node.right.right.right = new TreeNode(1);
+
             BinaryTree tree = new BinaryTree();
+            #region Tree
+            TreeNode inserBst = new TreeNode(4);
+            inserBst.left = new  TreeNode(2);
+            inserBst.right = new TreeNode(7);
+            inserBst.left.left = new TreeNode(1);
+            inserBst.left.right = new TreeNode(3);
+            tree.InsertIntoBST(inserBst, 5);
+            tree.PrintTreelevelOrderRecursion(node);
+            tree.PrintTreeLevelOrder(node);
+            tree.BstToGst(node);
+            tree.PrintTreeLevelOrder(tree.BstToGst(node));
+            #region BST to Greater Tree
+
+            #endregion
             //Node node = new Node(6);
             //node.left = new Node(3);
             //node.left.left = new Node(2);
@@ -21,24 +47,24 @@ namespace Tree
             //node.right = new Node(5);
             //node.right.right = new Node(4);
 
-            Node node = new Node(5);
-            node.left = new Node(4);
-            node.left.left = new Node(11);
-            node.left.left.left = new Node(7);
-            node.left.left.right = new Node(2);
+            //TreeNode node = new TreeNode(5);
+            //node.left = new TreeNode(4);
+            //node.left.left = new TreeNode(11);
+            //node.left.left.left = new TreeNode(7);
+            //node.left.left.right = new TreeNode(2);
 
-            node.right = new Node(8);
-            node.right.left = new Node(13);
-            node.right.right = new Node(4);
-            node.right.right.left = new Node(5);
-            node.right.right.right = new Node(1);
+            //node.right = new TreeNode(8);
+            //node.right.left = new TreeNode(13);
+            //node.right.right = new TreeNode(4);
+            //node.right.right.left = new TreeNode(5);
+            //node.right.right.right = new TreeNode(1);
             //tree.PathSum(node, 22);
 
-            var list = tree.ZigzagLevelOrder(node);
-            Node ancestor = tree.LowestCommonAncestor(node, new Node(2), new Node(5));
+            //var list = tree.ZigzagLevelOrder(node);
+            //Node ancestor = tree.LowestCommonAncestor(node, new Node(2), new Node(5));
             //int sum = tree.TreePathSum(node);
             //bool isTrue = tree.TreePathSum(node,653);
-            bool isTrue = tree.IsBST(node);
+            //bool isTrue = tree.IsBST(node);
             int height = tree.TreeHeight(node);
             tree.PrintTreePreOrder(node);
             tree.PrintTreePreOrderIterative(node);
@@ -50,14 +76,14 @@ namespace Tree
         }
     }
 
-    public class Node
+    public class TreeNode
     {
-        public int data;
-        public Node left;
-        public Node right;
-        public Node(int data)
+        public int val;
+        public TreeNode left;
+        public TreeNode right;
+        public TreeNode(int data)
         {
-            this.data = data;
+            this.val = data;
             left = null;
             right = null;
         }
@@ -65,6 +91,20 @@ namespace Tree
 
     public class BinaryTree
     {
+        public static int sum = 0;
+        public TreeNode BstToGst(TreeNode root)
+        {
+            if (root == null)
+                return root;
+            // Reverse of In order.
+            BstToGst(root.right);
+            sum = sum + root.val;
+            root.val = sum;
+            //Console.WriteLine(sum);
+            BstToGst(root.left);
+
+            return root;
+        }
         public int globalCount;
         public BinaryTree()
         {
@@ -75,7 +115,7 @@ namespace Tree
         // subtree, the second parameter is value  
         // of the number formed by nodes from root 
         // to this node  
-        public int TreePathsSumUtil(Node node, int sumSoFar)
+        public int TreePathsSumUtil(TreeNode node, int sumSoFar)
         {
             // Base case  
             if (node == null)
@@ -84,7 +124,7 @@ namespace Tree
             }
 
             // Update val  
-            int currentSum = (sumSoFar * 10 + node.data);
+            int currentSum = (sumSoFar * 10 + node.val);
 
             // if current node is leaf, return  
             // the current value of val  
@@ -98,12 +138,24 @@ namespace Tree
                 TreePathsSumUtil(node.right, currentSum);
         }
 
-        public IList<IList<int>> ZigzagLevelOrder(Node root)
+        public TreeNode InsertIntoBST(TreeNode root, int val)
+        {
+            if (root == null) return new TreeNode(val);
+
+            // insert into the right subtree
+            if (val > root.val) root.right = InsertIntoBST(root.right, val);
+            // insert into the left subtree
+            else root.left = InsertIntoBST(root.left, val);
+
+            return root;
+        }
+
+        public IList<IList<int>> ZigzagLevelOrder(TreeNode root)
         {
             var list = new List<IList<int>>();
             if (root == null) return list;
 
-            var q = new Queue<Node>();
+            var q = new Queue<TreeNode>();
             q.Enqueue(root);
             var level = 0;
             while (q.Count > 0)
@@ -115,11 +167,11 @@ namespace Tree
                     var node = q.Dequeue();
                     if (level % 2 == 0)
                     {
-                        l.Add(node.data);
+                        l.Add(node.val);
                     }
                     else
                     {
-                        l.Insert(0, node.data);
+                        l.Insert(0, node.val);
                     }
                     if (node.left != null) q.Enqueue(node.left);
                     if (node.right != null) q.Enqueue(node.right);
@@ -130,32 +182,28 @@ namespace Tree
 
             return list;
         }
-
-        public int TreePathSum(Node node)
+        public int TreePathSum(TreeNode node)
         {
             return TreePathsSumUtil(node, 0);
 
         }
-
-        public bool TreePathSum(Node node, int val)
+        public bool TreePathSum(TreeNode node, int val)
         {
             return PathExist(node, val, 0);
 
         }
-        public bool PathExist(Node node, int val, int sumSoFar)
+        public bool PathExist(TreeNode node, int val, int sumSoFar)
         {
             if (node == null) return false;
-            int currentSum = sumSoFar * 10 + node.data;
+            int currentSum = sumSoFar * 10 + node.val;
             if (currentSum == val && node.left == null && node.right == null) return true;
             return PathExist(node.left, val, currentSum) || PathExist(node.right, val, currentSum);
         }
-
-        public bool IsBST(Node node)
+        public bool IsBST(TreeNode node)
         {
             return CheckBST(node, null, null);
         }
-
-        public bool CheckBST(Node node, Node leftTree, Node rightTree)
+        public bool CheckBST(TreeNode node, TreeNode leftTree, TreeNode rightTree)
         {
             globalCount++;
             if (node == null)
@@ -163,33 +211,73 @@ namespace Tree
                 return true;
             }
 
-            if (leftTree != null && node.data == leftTree.data || rightTree != null && node.data == rightTree.data)
+            if (leftTree != null && node.val == leftTree.val || rightTree != null && node.val == rightTree.val)
             {
                 return false;
             }
-            if (leftTree != null && node.data < leftTree.data)
+            if (leftTree != null && node.val < leftTree.val)
             {
                 return false;
             }
-            if (rightTree != null && node.data > rightTree.data)
+            if (rightTree != null && node.val > rightTree.val)
             {
                 return false;
             }
             return CheckBST(node.left, leftTree, node) && CheckBST(node.right, node, rightTree);
         }
-        public void PrintTreePreOrder(Node root)
+        public void PrintTreePreOrder(TreeNode root)
         {
             //globalCount++;
             if (root == null)
             {
                 return;
             }
-            Console.WriteLine(root.data);
+            Console.WriteLine(root.val);
             PrintTreePreOrder(root.left);
             PrintTreePreOrder(root.right);
         }
+        public void PrintTreeInOrder(TreeNode root)
+        {
+            //globalCount++;
+            if (root == null)
+            {
+                return;
+            }
+           
+            PrintTreePreOrder(root.left);
+            Console.WriteLine(root.val);
+            PrintTreePreOrder(root.right);
+        }
 
-        public int TreeHeight(Node root)
+        public void PrintTreeLevelOrder(TreeNode root)
+        {
+            //globalCount++;
+            if (root == null)
+            {
+                return;
+            }
+            Queue<TreeNode> queue = new Queue<TreeNode>();
+            queue.Enqueue(root);
+            while(queue.Count > 0)
+            {
+                var dequeuedNode = queue.Dequeue();
+                Console.WriteLine(dequeuedNode.val);
+
+                if (dequeuedNode.left != null)
+                {
+                    queue.Enqueue(dequeuedNode.left);
+                }
+
+                if(dequeuedNode.right != null)
+                {
+                    queue.Enqueue(dequeuedNode.right);
+                }
+            }
+            //PrintTreePreOrder(root.left);
+            //Console.WriteLine(root.val);
+            //PrintTreePreOrder(root.right);
+        }
+        public int TreeHeight(TreeNode root)
         {
             if (root == null)
             {
@@ -204,19 +292,18 @@ namespace Tree
             }
             return rightHeight + 1;
         }
-
-        public void PrintTreePreOrderIterative(Node root)
+        public void PrintTreePreOrderIterative(TreeNode root)
         {
             if (root == null)
             {
                 return;
             }
-            Stack<Node> stack = new Stack<Node>();
+            Stack<TreeNode> stack = new Stack<TreeNode>();
             stack.Push(root);
             while (stack.Count() != 0)
             {
-                Node current = stack.Pop();
-                Console.WriteLine(current.data);
+                TreeNode current = stack.Pop();
+                Console.WriteLine(current.val);
                 if (current.right != null)
                 {
                     stack.Push(current.right);
@@ -228,18 +315,41 @@ namespace Tree
             }
         }
 
+        public void PrintTreelevelOrderRecursion(TreeNode root)
+        {
+            int heigth = TreeHeight(root);
+            for(int i = 1; i<=heigth; i++)
+            {
+                PrintTreelevelOrderRecursion(root, i);
+            }
+        }
+
+        public void PrintTreelevelOrderRecursion(TreeNode root, int level)
+        {
+            if (root == null)
+                return;
+            if(level == 1)
+            {
+                Console.WriteLine(root.val);
+            }
+            else if(level > 1)
+            {
+                PrintTreelevelOrderRecursion(root.left, level - 1);
+                PrintTreelevelOrderRecursion(root.right, level - 1);
+            }
+        }
+
         // Serialization: Encodes a tree to a single string.
-        public string Serialize(Node root)
+        public string Serialize(TreeNode root)
         {
             if (root == null)
             {
                 return null;
             }
-            return (root.data + " " + Serialize(root.left) + Serialize(root.right));
+            return (root.val + " " + Serialize(root.left) + Serialize(root.right));
         }
-
         // Deserialization: // Decodes your encoded data to tree.
-        private Node Deserialize(Queue<string> data)
+        private TreeNode Deserialize(Queue<string> data)
         {
             if (data.Count() == 0)
             {
@@ -247,21 +357,19 @@ namespace Tree
             }
             var val = data.Dequeue();
             if (val == null) return null;
-            var newTree = new Node(Convert.ToInt32(val));
+            var newTree = new TreeNode(Convert.ToInt32(val));
             newTree.left = Deserialize(data);
             newTree.right = Deserialize(data);
             return newTree;
         }
-
         // Decodes your encoded data to tree.
-        public Node Deserialize(string data)
+        public TreeNode Deserialize(string data)
         {
             var q = new Queue<string>();
             foreach (var v in data.Trim().Split(' ')) q.Enqueue(v);
             return Deserialize(q);
         }
-
-        public Node LowestCommonAncestor(Node root, Node p, Node q)
+        public TreeNode LowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q)
         {
             if (root == q || root == p || root == null) return root;
 
@@ -272,21 +380,20 @@ namespace Tree
             else if (left == null) return right;
             else return left;
         }
-
-        public IList<IList<int>> LevelOrderBottom(Node root)
+        public IList<IList<int>> LevelOrderBottom(TreeNode root)
         {
             var list = new List<IList<int>>();
             if (root == null)
             {
                 return list;
             }
-            Queue<Node> queue = new Queue<Node>();
+            Queue<TreeNode> queue = new Queue<TreeNode>();
             queue.Enqueue(root);
             var tempList = new List<int>();
             while (queue.Count != 0)
             {
-                Node current = queue.Dequeue();
-                tempList.Add(current.data);
+                TreeNode current = queue.Dequeue();
+                tempList.Add(current.val);
                 if (current.left != null)
                 {
                     queue.Enqueue(current.left);
@@ -300,43 +407,39 @@ namespace Tree
             list.Reverse();
             return list;
         }
-
-        public IList<IList<int>> PathSum(Node root, int sum)
+        public IList<IList<int>> PathSum(TreeNode root, int sum)
         {
             IList<IList<int>> result = new List<IList<int>>();
             IList<int> currentPath = new List<int>();
             GetPaths(root, sum, result, currentPath);
             return result;
         }
-
-        private void GetPaths(Node root, int sum, IList<IList<int>> result, IList<int> currentPath)
+        private void GetPaths(TreeNode root, int sum, IList<IList<int>> result, IList<int> currentPath)
         {
             if (root == null)
                 return;
-            currentPath.Add(root.data);
-            if (root.data == sum && root.left == null && root.right == null)
+            currentPath.Add(root.val);
+            if (root.val == sum && root.left == null && root.right == null)
             {
                 result.Add(new List<int>(currentPath));
             }
 
-            GetPaths(root.left, sum - root.data, result, currentPath);
-            GetPaths(root.right, sum - root.data, result, currentPath);
+            GetPaths(root.left, sum - root.val, result, currentPath);
+            GetPaths(root.right, sum - root.val, result, currentPath);
             currentPath.RemoveAt(currentPath.Count - 1);
 
         }
-
-        public Node SubtreeWithAllDeepest(Node root)
+        public TreeNode SubtreeWithAllDeepest(TreeNode root)
         {
             if (root == null)
             {
                 return root;
             }
 
-            (int depth, Node deepest) = GetDeepest(root, 0);
+            (int depth, TreeNode deepest) = GetDeepest(root, 0);
             return deepest;
         }
-
-        public static (int depth, Node deeepest) GetDeepest(Node node, int currentDepth)
+        public static (int depth, TreeNode deeepest) GetDeepest(TreeNode node, int currentDepth)
         {
             if (node == null)
             {

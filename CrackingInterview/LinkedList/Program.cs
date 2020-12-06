@@ -16,6 +16,8 @@ namespace LinkedList
             listNode.next.next = new ListNode(3);
             listNode.next.next.next = new ListNode(4);
             listNode.next.next.next.next = new ListNode(5);
+
+            LinkedList.GetNode(2, listNode);
             //listNode.next.next = new ListNode(3);
             //ListNode listNode2 = new ListNode(5);
             //listNode2.next = new ListNode(6);
@@ -24,7 +26,7 @@ namespace LinkedList
             //LinkedList.PrintLinkedList(listNode);
             //LinkedList.AddTwoNumbers(listNode, listNode2);
             //LinkedList.IsPalindrome(listNode);
-            LinkedList.RemoveNthFromEnd(listNode, 2);
+            //LinkedList.RemoveNthFromEnd(listNode, 2);
             #endregion
         }
     }
@@ -40,6 +42,28 @@ namespace LinkedList
     }
     class LinkedList
     {
+        static int count = 0;
+        public static int GetCount(ListNode head)
+        {
+            ListNode current = head;
+
+            while(current != null)
+            {
+                current = current.next;
+                count++;
+            }    
+            return count;
+        }
+        public static ListNode GetNode(int index, ListNode head)
+        {
+            if (index >= GetCount(head))
+                return null;
+            var curr = head;
+            for (int i = 0; i < index; i++)
+                curr = curr.next;
+
+            return curr;
+        }
         public static ListNode AddTwoNumbers(ListNode l1, ListNode l2)
         {
             ListNode dummyHead = new ListNode(0);

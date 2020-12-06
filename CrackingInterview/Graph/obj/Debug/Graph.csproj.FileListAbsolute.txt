@@ -11,3 +11,4 @@ C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Graph\bin\Deb
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Graph\obj\Debug\Graph.csproj.CoreCompileInputs.cache
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Graph\obj\Debug\Graph.exe
 C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Graph\obj\Debug\Graph.pdb
+C:\Users\bsinghui\source\repos\CrackingInterview\CrackingInterview\Graph\obj\Debug\Graph.csprojAssemblyReference.cache

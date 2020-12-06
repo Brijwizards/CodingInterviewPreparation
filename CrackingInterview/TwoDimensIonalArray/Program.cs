@@ -8,9 +8,74 @@ namespace TwoDimensIonalArray
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Console.WriteLine("Hello World!");
+            //NumIslands(new char[][] { new char[] { '1', '1', '0', '0', '0' }, new char[] { '1', '1', '0', '0', '0' },
+            //    new char[] { '0', '0', '1', '0', '0' } , new char[] { '0', '0', '0', '1', '1' } });
+            FindOrder(4, new int[][] { new int[] { 1, 0 }, new int[] { 2, 0 }, new int[] { 3, 1 }, new int[] { 3, 2 } });
+           // FindOrder(2, new int[][] { new int[] { 1, 0 }});
+            WallsAndGates(new int[][] { new int[] { 2147483647, -1, 0, 2147483647 },
+            new int[]{2147483647,2147483647,2147483647,-1}, new int[]{ 2147483647, -1, 2147483647, -1 }, new int[]{0,-1,2147483647,2147483647 } });
         }
 
+        public static int[] FindOrder(int numCourses, int[][] prerequisites)
+        {
+            var list = new HashSet<int>();
+            var dict = new Dictionary<int, HashSet<int>>();
+            foreach(var item in prerequisites)
+            {
+                if(!dict.ContainsKey(item[1]))
+                {
+                    dict.Add(item[1], new HashSet<int> { item[0] });
+                }
+                else
+                {
+                    dict[item[1]].Add(item[0]);
+                }
+            }
+
+            //var list
+            foreach (var item in dict)
+            {
+                list.Add(item.Key);
+                var hashset = item.Value;
+                foreach (var value in hashset)
+                    list.Add(value);
+                if (numCourses == list.Count)
+                {
+                    return list.ToArray();
+                }
+               
+            }
+
+            return list.ToArray();
+        }
+        public static void WallsAndGates(int[][] rooms)
+        {
+            if (rooms == null || rooms.Length == 0)
+                return;
+
+            for (int i = 0; i < rooms.Length; i++)
+            {
+                for (int j = 0; j < rooms[i].Length; j++)
+                {
+                    if (rooms[i][j] == 0)
+                    {
+                        DFS(i, j, 0, rooms);
+                    }
+                }
+            }
+        }
+
+        public static void DFS(int i, int j, int count, int[][] rooms)
+        {
+            if (i < 0 || j < 0 || i >= rooms.Length || j >= rooms[i].Length || rooms[i][j] < count)
+                return;
+            rooms[i][j] = count;
+            DFS(i + 1, j, count + 1, rooms);
+            DFS(i - 1, j, count + 1, rooms);
+            DFS(i, j + 1, count + 1, rooms);
+            DFS(i, j - 1, count + 1, rooms);
+        }
         public static bool IsRectangle(int[,] matrix)
         {
             // finding row and column size 
@@ -212,6 +277,46 @@ namespace TwoDimensIonalArray
                     ib++;
             }
             return new int[] { };
+        }
+
+        public static int NumIslands(char[][] grid)
+        {
+            if (grid == null || grid.Length == 0)
+                return 0;
+
+            int islandCount = 0;
+            int row = grid.Length;
+            int col = grid[0].Length;
+
+            for (int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < grid[i].Length; j++)
+                {
+                    if (grid[i][j] == '1')
+                    {
+                        islandCount++;
+                        NumIslands(grid, i, j);
+                    }
+                }
+            }
+
+            return islandCount;
+        }
+
+        public static void NumIslands(char[][] grid, int row, int col)
+        {
+            if (row < 0 || col < 0 || row > grid.Length - 1 || col > grid[row].Length - 1 || grid[row][col] == '0')
+                return;
+            grid[row][col] = '0';
+
+            // Exlpore bottom.
+            NumIslands(grid, row + 1, col);
+            // Exlplore top.
+            NumIslands(grid, row - 1, col);
+            // Explore right.
+            NumIslands(grid, row, col + 1);
+            // Explore left.
+            NumIslands(grid, row, col - 1);
         }
     }
 

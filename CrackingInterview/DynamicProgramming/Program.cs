@@ -7,7 +7,68 @@ namespace DynamicProgramming
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Console.WriteLine("Hello World!");
+            Rob2(new int[] { 1, 2, 1, 1 });
+        }
+
+        public static int Rob(int[] nums)
+        {
+            if (nums == null || nums.Length == 0)
+                return 0;
+
+            if (nums.Length == 1)
+                return nums[0];
+
+            //int[] dp = new int[nums.Length];      
+
+            //dp[0] = nums[0];
+            //dp[1] = Math.Max(nums[0], nums[1]);
+
+            int previousSum = nums[0];
+            int currentSum = Math.Max(nums[0], nums[1]); ;
+
+
+            for (int i = 2; i < nums.Length; i++)
+            {
+                //dp[i] = Math.Max(nums[i] + dp[i-2], dp[i-1] ); 
+                var temp = Math.Max(nums[i] + previousSum, currentSum);
+                previousSum = currentSum;
+                currentSum = temp;
+
+            }
+            return currentSum;
+        }
+        public static int Rob2(int[] nums)
+        {
+            if (nums == null || nums.Length == 0)
+                return 0;
+
+            if (nums.Length == 1)
+                return nums[0];
+
+            if (nums.Length == 2)
+                return Math.Max(nums[0], nums[1]);
+
+            int length = nums.Length;
+            var max1 = RobHouse(nums, 0, length - 2);
+            var max2 = RobHouse(nums, 1, length - 1);
+
+            return Math.Max(max1, max2);
+        }
+
+        public static int RobHouse(int[] nums, int start, int end)
+        {
+            int previousSum = 0;
+            int currentSum = 0;
+            for (int i = start; i <= end; i++)
+            {
+                var temp = Math.Max(nums[i] + previousSum, currentSum);
+                previousSum = currentSum;
+                currentSum = temp;
+
+            }
+
+            return currentSum;
         }
 
         public static int CoinChange2(int amount, int[] coins)
